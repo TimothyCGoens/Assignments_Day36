@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+{{#blogstuff}}
+    <form action='/edit-post' method='POST'>
+    <input type='hidden' name='postId' value='{{postid}}'/>
+    <input type='text' name='postTitle' value='{{posttitle}}'></input>
+    <textarea name='postBody'>{{postbody}}</textarea>
+    <button type='submit'>Update</button>
+  </form>
+  {{/blogstuff}}
+
+
+
+  </body>
+</html>

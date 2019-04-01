@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+<h1>Blogstuff</h1>
+<ul>
+  {{#blogstuff}}
+  <li>
+    {{posttitle}}
+    <p>
+      {{postbody}}
+    </p>
+    <form action="/delete-post" method='POST'>
+      <input type='hidden' name='postId' value='{{postid}}'/>
+      <button type='submit'>Delete</button>
+    </form>
+    <form action='/selected-post' method='POST'>
+    <input type='hidden' name='postId' value='{{postid}}'/>
+      <button type='submit'>Edit</button>
+    </form>
+  </li>
+  {{/blogstuff}}
+</ul>
+
+  </body>
+</html>
